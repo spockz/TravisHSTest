@@ -1,0 +1,7 @@
+language: erlang # moves builds to least busy workers
+before_install:
+  - sudo apt-get install haskell-platform
+install: cabal install
+script: cabal configure --enable-tests && cabal build && cabal test
+notifications:
+  email: false
