@@ -1,7 +1,3 @@
-language: erlang # moves builds to least busy workers
-before_install:
-  - sudo apt-get install python-software-properties && sudo apt-add-repository ppa:mbeloborodiy/ppa && sudo apt-get update && sudo apt-get install haskell-platform
-install: cabal update && cabal install
-script: cabal configure --enable-tests && cabal build && cabal test
+language: haskell
 notifications:
   email: false
